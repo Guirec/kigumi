@@ -1,0 +1,12 @@
+/* Layers */
+
+@layer global, compositions, blocks, exceptions, utilities;
+
+/* Global */
+
+@import "global/reset.css" layer(global);
+@import "global/global.css" layer(global);
+
+/* Blocks */
+
+@import "blocks/disclosure.css" layer(blocks);

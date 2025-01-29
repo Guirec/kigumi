@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kigumi web components</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<script
+			type="module"
+			src="components/alert-machine/alert-machine.ts"
+		></script>
+		<script type="module" src="components/disclosure/disclosure.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Kigumi components</h1>
+		</header>
+
+		<main>
+			<section aria-labelledby="component-disclosure">
+				<h2 id="component-disclosure">Disclosure</h2>
+
+				<k-disclosure expand="exclusive">
+					<span>Section 1</span>
+					<div>
+						<p>Contenu de la section 1</p>
+					</div>
+
+					<h3>Section 2</h3>
+					<div>
+						<p>Contenu de la section 2</p>
+						<ul>
+							<li>Item 1</li>
+							<li>Item 2</li>
+						</ul>
+					</div>
+
+					<span>Section 3</span>
+					<div>
+						<p>Contenu de la section 3</p>
+					</div>
+				</k-disclosure>
+
+				<k-disclosure>
+					<span>Section 1</span>
+					<div>
+						<p>Contenu de la section 1</p>
+					</div>
+				</k-disclosure>
+			</section>
+		</main>
+	</body>
+</html>

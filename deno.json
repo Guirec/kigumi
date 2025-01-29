@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-read --allow-env --allow-net --allow-run --allow-ffi --allow-write --allow-sys npm:vite",
+    "build": "deno run --allow-read --allow-write --allow-env --allow-net --allow-run --allow-ffi --allow-sys npm:vite build",
+    "preview": "deno run --allow-read --allow-env --allow-net --allow-run --allow-ffi --allow-sys npm:vite preview"
+  },
+  "imports": {
+    "vite": "npm:vite@6.0.11"
+  }
+}
