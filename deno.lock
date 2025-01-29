@@ -2,6 +2,7 @@
   "version": "4",
   "specifiers": {
     "npm:@biomejs/biome@^1.9.4": "1.9.4",
+    "npm:lucide@0.474": "0.474.0",
     "npm:vite@6.0.11": "6.0.11",
     "npm:vite@^6.0.11": "6.0.11"
   },
@@ -211,6 +212,9 @@
     "fsevents@2.3.3": {
       "integrity": "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw=="
     },
+    "lucide@0.474.0": {
+      "integrity": "sha512-2rfORNh9fzhCUKu0ciE48ogR1Zg7hleABLO5MBF06vOb4esTtE8FbfQJiC+wveiNFoeojWKz6zXheUToRR5uIg=="
+    },
     "nanoid@3.3.8": {
       "integrity": "sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w=="
     },
@@ -271,6 +275,7 @@
     "packageJson": {
       "dependencies": [
         "npm:@biomejs/biome@^1.9.4",
+        "npm:lucide@0.474",
         "npm:vite@^6.0.11"
       ]
     }
