@@ -1,3 +1,11 @@
+# Dependencies directory - contains all installed npm packages
 node_modules
+
+# Deno runtime directory - contains cached dependencies and compilation artifacts
 .deno
+
+# macOS system files that store custom folder attributes
 .DS_Store
+
+# Build output directory - contains compiled/bundled files
+dist

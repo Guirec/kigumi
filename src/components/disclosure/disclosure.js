@@ -1,14 +1,12 @@
+// Import of types (DisclosureAttributes)
+import "./../../config/types.js";
+
 /**
  * Import and initialization of styles
  */
 import styles from "./disclosure.css?inline";
 const sheet = new CSSStyleSheet();
 sheet.replaceSync(styles);
-
-/**
- * @typedef {Object} DisclosureAttributes
- * @property {'mixed'|'exclusive'} [expand="mixed"] - Expansion mode for sections. In exclusive mode, only one section can be open at a time
- */
 
 /**
  * Web component to create collapsible/expandable sections
@@ -23,6 +21,14 @@ sheet.replaceSync(styles);
  * </k-disclosure>
  */
 class Disclosure extends HTMLElement {
+	/**
+	 * List of attributes to observe for changes
+	 * @returns {string[]}
+	 */
+	static get observedAttributes() {
+		return ["expand"];
+	}
+
 	/**
 	 * @private
 	 * @type {ShadowRoot}
@@ -166,9 +172,11 @@ class Disclosure extends HTMLElement {
 
 		// Create and add each section
 		const sections = this.#createSectionPairs();
-		sections
-			.map((section) => this.#createSection(section))
-			.forEach((details) => this.#shadowRoot.appendChild(details));
+		const details = sections.map((section) => this.#createSection(section));
+
+		for (const detail of details) {
+			this.#shadowRoot.appendChild(detail);
+		}
 	}
 
 	/**
@@ -177,6 +185,19 @@ class Disclosure extends HTMLElement {
 	 */
 	connectedCallback() {
 		this.#render();
+	}
+
+	/**
+	 * Called when an observed attribute is changed
+	 * @param {string} name - Attribute name
+	 * @param {string} oldValue - Old attribute value
+	 * @param {string} newValue - New attribute value
+	 */
+	attributeChangedCallback(name, oldValue, newValue) {
+		if (name === "expand" && oldValue !== newValue) {
+			this.#expand = newValue || "mixed";
+			this.#render();
+		}
 	}
 }
 
