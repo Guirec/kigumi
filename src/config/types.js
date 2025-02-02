@@ -10,7 +10,7 @@
 
 /**
  * @typedef {Object} DisclosureAttributes
- * @property {'mixed'|'exclusive'} [expand="mixed"] - Expansion mode for sections. In exclusive mode, only one section can be open at a time
+ * @property {'mixed'|'exclusive'} [mode="mixed"] - Expansion mode for sections. In exclusive mode, only one section can be open at a time
  */
 
 /**

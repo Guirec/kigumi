@@ -11,6 +11,7 @@ k-disclosure {
 	/* Summary */
 	--k-disclosure-summary-padding: 0.5rem;
 	--k-disclosure-summary-gap: 1rem;
+	--k-disclosure-summary-font-weight: 700;
 	--k-disclosure-summary-background-color: var(--k-disclosure-background-color);
 	--k-disclosure-summary-border-width: var(--k-disclosure-border-width);
 	--k-disclosure-summary-border-style: var(--k-disclosure-border-style);
@@ -19,8 +20,21 @@ k-disclosure {
 	--k-disclosure-summary-background-color-hover: #eeeeee;
 	--k-disclosure-summary-cursor: pointer;
 
+	/* Summary icon */
+	--k-disclosure-icon-svg-width: 1.5rem;
+	--k-disclosure-icon-svg-height: 1.5rem;
+	--k-disclosure-icon-svg-fill: none;
+	--k-disclosure-icon-svg-stroke: currentColor;
+	--k-disclosure-icon-svg-stroke-width: 2;
+	--k-disclosure-icon-svg-stroke-linecap: round;
+	--k-disclosure-icon-svg-stroke-linejoin: round;
+	--k-disclosure-icon-transform-open: rotate(180deg);
+	--k-disclosure-icon-transition-duration: 0.4s;
+	--k-disclosure-icon-transition-timing-function: ease;
+
 	/* Content */
 	--k-disclosure-content-padding: 1rem;
+	--k-disclosure-content-background-color: var(--k-disclosure-background-color);
 	--k-disclosure-content-border-width: 0 var(--k-disclosure-border-width)
 		var(--k-disclosure-border-width);
 	--k-disclosure-content-border-style: var(--k-disclosure-border-style);
@@ -35,8 +49,4 @@ k-disclosure {
 			-1 * var(--k-disclosure-border-width)
 		)
 		0 0;
-
-	+ k-disclosure {
-		margin: 2rem 0 0;
-	}
 }

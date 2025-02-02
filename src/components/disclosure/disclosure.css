@@ -19,10 +19,15 @@ details {
  */
 
 summary {
+	position: relative;
 	display: flex;
 	align-items: center;
 	gap: var(--k-disclosure-summary-gap);
 	padding: var(--k-disclosure-summary-padding);
+	color: var(--k-disclosure-summary-color);
+	font-family: var(--k-disclosure-summary-font-family);
+	font-size: var(--k-disclosure-summary-font-size);
+	font-weight: var(--k-disclosure-summary-font-weight);
 	background-color: var(--k-disclosure-summary-background-color);
 	border-width: var(--k-disclosure-summary-border-width);
 	border-style: var(--k-disclosure-summary-border-style);
@@ -34,14 +39,50 @@ summary {
 		background-color: var(--k-disclosure-summary-background-color-hover);
 	}
 
+	&:focus-visible {
+		z-index: 1;
+	}
+
 	&::-webkit-details-marker,
 	&::marker {
 		content: none;
 		display: none;
 	}
 
-	[aria-hidden="true"] {
-		display: flex;
+	& > k-icon {
+		--k-icon-width: var(--k-disclosure-icon-width);
+		--k-icon-height: var(--k-disclosure-icon-height);
+		--k-icon-padding: var(--k-disclosure-icon-padding);
+		--k-icon-background: var(--k-disclosure-icon-background);
+		--k-icon-border-width: var(--k-disclosure-icon-border-width);
+		--k-icon-border-style: var(--k-disclosure-icon-border-style);
+		--k-icon-border-color: var(--k-disclosure-icon-border-color);
+		--k-icon-border-radius: var(--k-disclosure-icon-border-radius);
+
+		--k-icon-svg-width: var(--k-disclosure-icon-svg-width);
+		--k-icon-svg-height: var(--k-disclosure-icon-svg-height);
+		--k-icon-svg-fill: var(--k-disclosure-icon-svg-fill);
+		--k-icon-svg-stroke: var(--k-disclosure-icon-svg-stroke);
+		--k-icon-svg-stroke-width: var(--k-disclosure-icon-svg-stroke-width);
+		--k-icon-svg-stroke-linecap: var(--k-disclosure-icon-svg-stroke-linecap);
+		--k-icon-svg-stroke-linejoin: var(--k-disclosure-icon-svg-stroke-linejoin);
+
+		flex: 0 0 auto;
+		order: 1;
+		transition-property: transform;
+
+		[open] & {
+			transform: var(--k-disclosure-icon-transform-open);
+		}
+
+		:host([icon-position="start"]) & {
+			order: -1;
+		}
+	}
+
+	& > *:not(k-icon) {
+		all: unset;
+		flex: 1 1 auto;
 	}
 }
 
@@ -77,5 +118,12 @@ summary + * {
 			opacity: 1;
 			block-size: auto;
 		}
+	}
+
+	summary > k-icon {
+		transition-duration: var(--k-disclosure-icon-transition-duration);
+		transition-timing-function: var(
+			--k-disclosure-icon-transition-timing-function
+		);
 	}
 }

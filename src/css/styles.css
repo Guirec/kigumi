@@ -10,3 +10,4 @@
 /* Blocks */
 
 @import "blocks/disclosure.css" layer(blocks);
+@import "blocks/icon.css" layer(blocks);

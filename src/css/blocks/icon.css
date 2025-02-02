@@ -1,0 +1,9 @@
+k-icon {
+	--k-icon-svg-width: 1.5rem;
+	--k-icon-svg-height: 1.5rem;
+	--k-icon-svg-fill: none;
+	--k-icon-svg-stroke: currentColor;
+	--k-icon-svg-stroke-width: 2;
+	--k-icon-svg-stroke-linecap: round;
+	--k-icon-svg-stroke-linejoin: round;
+}

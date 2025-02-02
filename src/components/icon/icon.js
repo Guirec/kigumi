@@ -1,6 +1,14 @@
-// Import of types (IconAttributes, KigumiConfig)
+// Import types (IconAttributes, KigumiConfig)
 import "./../../config/types.js";
+// Import config
 import { loadConfig } from "./../../config/config.js";
+
+/**
+ * Import and initialization of styles
+ */
+import styles from "./icon.css?inline";
+const sheet = new CSSStyleSheet();
+sheet.replaceSync(styles);
 
 /**
  * Custom web component to display icons
@@ -49,6 +57,9 @@ class Icon extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({ mode: "open" });
+
+		// Adopt the stylesheet
+		this.shadowRoot.adoptedStyleSheets = [sheet];
 	}
 
 	/**
@@ -208,4 +219,7 @@ Icon.initialize().catch((error) => {
 	console.error("Error initializing icons:", error);
 });
 
-customElements.define("k-icon", Icon);
+// Check if the component is not already defined
+if (!customElements.get("k-icon")) {
+	customElements.define("k-icon", Icon);
+}
