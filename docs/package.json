@@ -1,0 +1,22 @@
+{
+	"name": "@kigumi/docs",
+	"version": "0.0.1",
+	"description": "Kigumi documentation",
+	"type": "module",
+	"scripts": {
+		"dev": "eleventy --serve",
+		"dev:refresh": "pnpm --filter @kigumi/styles run dev & eleventy --serve",
+		"build": "eleventy"
+	},
+	"peerDependencies": {
+		"@biomejs/biome": "^1.9.4"
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy-navigation": "^0.3.5",
+		"@kigumi/styles": "workspace:*"
+	},
+	"license": "MIT",
+	"author": "Guirec Lefort <bonjour@guirec.dev>",
+	"keywords": []
+}

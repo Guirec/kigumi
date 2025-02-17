@@ -1,0 +1,8 @@
+---
+layout: base
+classLayout: home
+---
+
+<div {% if classLayout %}class="{{ classLayout }}__main"{% endif %}>
+	{{ content }}
+</div>

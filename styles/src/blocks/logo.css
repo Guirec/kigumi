@@ -1,0 +1,9 @@
+.logo {
+	display: flex;
+	align-items: center;
+	gap: var(--k-spacing-5);
+	font-size: 1.25rem;
+	font-weight: 700;
+	text-decoration: none;
+	color: currentColor;
+}

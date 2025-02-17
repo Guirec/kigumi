@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ metadata.language }}">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{% if title %}{{ title }} - {% endif %}{{ metadata.title }}</title>
+		<meta
+			name="description"
+			content="{{ description | default: metadata.description }}"
+		/>
+		<link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
+	</head>
+	<body {% if classLayout %}class="{{ classLayout }}"{% endif %}>
+		<header {% if classLayout %}class="{{ classLayout }}__header"{% endif %}>
+			<a href="/" class="logo">{{ metadata.title }}</a>
+			<nav aria-label="primary">
+				{{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
+			</nav>
+		</header>
+		{{ content }}
+	</body>
+</html>

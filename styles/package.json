@@ -1,0 +1,25 @@
+{
+	"name": "@kigumi/styles",
+	"version": "0.0.1",
+	"description": "Kigumi styles",
+	"files": [
+		"dist"
+	],
+	"main": "./dist/kigumi.css",
+	"scripts": {
+		"build": "lightningcss --minify --bundle src/kigumi.css --output-file dist/kigumi.css"
+	},
+	"peerDependencies": {
+		"@biomejs/biome": "^1.9.4"
+	},
+	"devDependencies": {
+		"lightningcss-cli": "^1.29.1"
+	},
+	"author": "Guirec Lefort <bonjour@guirec.dev>",
+	"license": "MIT",
+	"keywords": [
+		"css",
+		"design-system",
+		"styles"
+	]
+}

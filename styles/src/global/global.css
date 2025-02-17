@@ -1,0 +1,10 @@
+body {
+	font-family: var(--k-font-family);
+	font-size: var(--k-font-size);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	:root {
+		interpolate-size: allow-keywords;
+	}
+}

@@ -1,0 +1,11 @@
+# Dependencies directory - contains all installed npm packages
+node_modules
+
+# macOS system files that store custom folder attributes
+.DS_Store
+
+# Vite cache directory
+.vite
+
+# Eleventy cache directory
+.eleventy

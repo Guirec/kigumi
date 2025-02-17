@@ -1,0 +1,32 @@
+:root {
+	/* Font size */
+	--k-font-family: system-ui, sans-serif;
+
+	/* Spacing */
+	--k-spacing-1: 0.125rem; /* 2px */
+	--k-spacing-2: 0.25rem; /* 4px */
+	--k-spacing-3: 0.5rem; /* 8px */
+	--k-spacing-4: 0.75rem; /* 12px */
+	--k-spacing-5: 1rem; /* 16px */
+	--k-spacing-6: 1.5rem; /* 24px */
+	--k-spacing-7: 2rem; /* 32px */
+	--k-spacing-8: 2.5rem; /* 40px */
+	--k-spacing-9: 3rem; /* 48px */
+	--k-spacing-10: 4rem; /* 64px */
+	--k-spacing-11: 5rem; /* 80px */
+	--k-spacing-12: 6rem; /* 96px */
+	--k-spacing-13: 10rem; /* 160px */
+
+	/* Colors */
+	--k-color-neutral-0: oklch(100% 0.01 280);
+	--k-color-neutral-100: oklch(97% 0.01 280);
+	--k-color-neutral-200: oklch(89% 0.01 280);
+	--k-color-neutral-300: oklch(80% 0.01 280);
+	--k-color-neutral-400: oklch(71% 0.01 280);
+	--k-color-neutral-500: oklch(60% 0.01 280);
+	--k-color-neutral-600: oklch(49% 0.01 280);
+	--k-color-neutral-700: oklch(38% 0.01 280);
+	--k-color-neutral-800: oklch(25% 0.01 280);
+	--k-color-neutral-900: oklch(12% 0.01 280);
+	--k-color-neutral-1000: oklch(0% 0.01 280);
+}

@@ -1,2 +1,3 @@
-# kigumi
-A web components library to build modern interfaces
+# Kigumi
+
+A design system for your everyday projects
