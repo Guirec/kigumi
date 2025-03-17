@@ -8,12 +8,16 @@
 			name="description"
 			content="{{ description | default: metadata.description }}"
 		/>
-		<link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
+		<link rel="stylesheet" href="{% getBundleFileUrl 'css' %}{{ '' | cacheBust }}">
+		{% css %}
+			@import "kigumi.css";
+			@import "main.css";
+		{% endcss %}
 	</head>
-	<body {% if classLayout %}class="{{ classLayout }}"{% endif %}>
-		<header {% if classLayout %}class="{{ classLayout }}__header"{% endif %}>
+	<body class="layout"{% if layoutVariant %} data-variant="{{ layoutVariant }}"{% endif %}>
+		<header class="layout__header">
 			<a href="/" class="logo">{{ metadata.title }}</a>
-			<nav aria-label="primary">
+			<nav class="navigation" aria-label="primary">
 				{{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
 			</nav>
 		</header>

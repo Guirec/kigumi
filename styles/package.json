@@ -7,7 +7,8 @@
 	],
 	"main": "./dist/kigumi.css",
 	"scripts": {
-		"build": "lightningcss --minify --bundle src/kigumi.css --output-file dist/kigumi.css"
+		"build": "lightningcss --minify --bundle src/kigumi.css --output-file dist/kigumi.css",
+		"lint:fix": "biome check --write ."
 	},
 	"peerDependencies": {
 		"@biomejs/biome": "^1.9.4"

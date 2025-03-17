@@ -6,7 +6,8 @@
 	"scripts": {
 		"dev": "eleventy --serve",
 		"dev:refresh": "pnpm --filter @kigumi/styles run dev & eleventy --serve",
-		"build": "eleventy"
+		"build": "eleventy",
+		"lint:fix": "biome check --write ."
 	},
 	"peerDependencies": {
 		"@biomejs/biome": "^1.9.4"
@@ -14,7 +15,9 @@
 	"devDependencies": {
 		"@11ty/eleventy": "^3.0.0",
 		"@11ty/eleventy-navigation": "^0.3.5",
-		"@kigumi/styles": "workspace:*"
+		"@kigumi/styles": "workspace:*",
+		"del": "^8.0.0",
+		"lightningcss": "^1.29.1"
 	},
 	"license": "MIT",
 	"author": "Guirec Lefort <bonjour@guirec.dev>",

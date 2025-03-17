@@ -1,0 +1,15 @@
+{
+	"name": "kigumi",
+	"private": true,
+	"version": "0.0.1",
+	"description": "A design system for your everyday projects",
+	"author": "Guirec Lefort <bonjour@guirec.dev>",
+	"license": "MIT",
+	"scripts": {
+		"build": "pnpm -r build",
+		"lint:fix": "pnpm -r lint:fix"
+	},
+	"peerDependencies": {
+		"@biomejs/biome": "^1.9.4"
+	}
+}

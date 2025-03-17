@@ -4,7 +4,8 @@
 	"description": "Kigumi components",
 	"type": "module",
 	"scripts": {
-		"build": "vite build"
+		"build": "vite build",
+		"lint:fix": "biome check --write ."
 	},
 	"files": [
 		"dist"

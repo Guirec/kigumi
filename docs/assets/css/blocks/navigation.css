@@ -1,0 +1,29 @@
+.navigation {
+	grid-column: content-start / full-end;
+	display: flex;
+	align-items: center;
+	padding: var(--docs-layout-header-padding-block)
+		var(--docs-layout-header-padding-inline);
+	padding-inline-start: calc(
+		var(--docs-layout-header-padding-inline) + var(--k-spacing-6)
+	);
+
+	& ul {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+		gap: var(--k-spacing-6);
+		list-style: none;
+	}
+
+	& li {
+		margin: 0;
+		font-weight: 700;
+	}
+
+	& a {
+		color: currentColor;
+		text-decoration: none;
+	}
+}

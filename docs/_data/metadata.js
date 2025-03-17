@@ -1,5 +1,5 @@
 export default {
 	language: "en",
-	title: "Kigumi Design System",
+	title: "Kigumi",
 	description: "A design system for your everyday projects",
 };

@@ -1,0 +1,12 @@
+.logo {
+	grid-column: full-start / content-start;
+	display: flex;
+	align-items: center;
+	padding: var(--docs-layout-header-padding-block)
+		var(--docs-layout-header-padding-inline);
+	font-size: 1.25rem;
+	font-weight: 700;
+	text-decoration: none;
+	color: currentColor;
+	border-inline-end: var(--docs-layout-border-width) solid black;
+}

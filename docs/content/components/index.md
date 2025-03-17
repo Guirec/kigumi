@@ -3,7 +3,7 @@ layout: page.liquid
 title: Components
 eleventyNavigation:
   key: Components
-  order: 0
+  order: 1
 ---
 
 ## Components list

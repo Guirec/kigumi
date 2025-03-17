@@ -1,8 +1,8 @@
 .content {
-	--k-content-header-height: 300px;
-	--k-content-header-text-color: white;
-	--k-content-header-background-color: oklch(59.2% 0.0935 251.98);
-	--k-content-header-background-image: radial-gradient(
+	--docs-content-header-height: 300px;
+	--docs-content-header-text-color: white;
+	--docs-content-header-background-color: oklch(59.2% 0.0935 251.98);
+	--docs-content-header-background-image: radial-gradient(
 			30% 20% at 96% 2%,
 			oklch(72.49% 0.075 121.93 / 85%) 0%,
 			oklch(72.49% 0.075 121.93 / 0%) 100%
@@ -58,9 +58,9 @@
 			oklch(72.48% 0.0639 235.54) 45%,
 			oklch(35.45% 0.179 274.89) 100%
 		);
-	--k-content-header-background-noise-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="n"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="5" numOctaves="5" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23n)"/%3E%3C/svg%3E');
-	--k-content-header-background-noise-opacity: 0.3;
-	--k-content-header-background-image-mix-blend-mode: overlay;
+	--docs-content-header-background-noise-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="n"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="5" numOctaves="5" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23n)"/%3E%3C/svg%3E');
+	--docs-content-header-background-noise-opacity: 0.3;
+	--docs-content-header-background-image-mix-blend-mode: overlay;
 }
 
 .content__header {
@@ -69,10 +69,10 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: end;
-	min-height: var(--k-content-header-height);
-	color: var(--k-content-header-text-color);
-	background-color: var(--k-content-header-background-color);
-	background-image: var(--k-content-header-background-image);
+	min-height: var(--docs-content-header-height);
+	color: var(--docs-content-header-text-color);
+	background-color: var(--docs-content-header-background-color);
+	background-image: var(--docs-content-header-background-image);
 	background-size: cover;
 
 	&::before {
@@ -80,10 +80,10 @@
 		position: absolute;
 		inset: 0;
 		z-index: -1;
-		background-image: var(--k-content-header-background-noise-image);
+		background-image: var(--docs-content-header-background-noise-image);
 		background-repeat: repeat;
-		opacity: var(--k-content-header-background-noise-opacity);
-		mix-blend-mode: var(--k-content-header-background-image-mix-blend-mode);
+		opacity: var(--docs-content-header-background-noise-opacity);
+		mix-blend-mode: var(--docs-content-header-background-image-mix-blend-mode);
 		pointer-events: none;
 	}
 
