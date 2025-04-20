@@ -3,8 +3,8 @@
 	--docs-layout-content: 1fr;
 	--docs-layout-header-height: 3.5rem;
 	--docs-layout-sidebar-width: 17.5rem;
-	--docs-layout-header-padding-block: var(--k-spacing-3);
-	--docs-layout-header-padding-inline: var(--k-spacing-6);
+	--docs-layout-header-padding-block: var(--k-space-px-100);
+	--docs-layout-header-padding-inline: var(--k-space-px-300);
 	--docs-layout-border-width: 2px;
 
 	position: relative;

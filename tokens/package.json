@@ -1,13 +1,13 @@
 {
-	"name": "@kigumi/styles",
+	"name": "@kigumi/tokens",
 	"version": "0.0.1",
-	"description": "Kigumi styles",
+	"description": "Kigumi tokens",
 	"files": [
 		"dist"
 	],
-	"main": "./dist/kigumi.css",
+	"main": "./dist/tokens.css",
 	"scripts": {
-		"build": "lightningcss --minify --bundle src/styles.css --output-file dist/styles.css",
+		"build": "lightningcss --minify --bundle src/tokens.css --output-file dist/tokens.css",
 		"lint:fix": "biome check --write ."
 	},
 	"peerDependencies": {
@@ -21,6 +21,6 @@
 	"keywords": [
 		"css",
 		"design-system",
-		"styles"
+		"tokens"
 	]
 }

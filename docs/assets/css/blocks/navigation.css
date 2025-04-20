@@ -5,7 +5,7 @@
 	padding: var(--docs-layout-header-padding-block)
 		var(--docs-layout-header-padding-inline);
 	padding-inline-start: calc(
-		var(--docs-layout-header-padding-inline) + var(--k-spacing-6)
+		var(--docs-layout-header-padding-inline) + var(--k-space-px-300)
 	);
 
 	& ul {
@@ -13,7 +13,7 @@
 		align-items: center;
 		margin: 0;
 		padding: 0;
-		gap: var(--k-spacing-6);
+		gap: var(--k-space-px-400);
 		list-style: none;
 	}
 
@@ -24,6 +24,21 @@
 
 	& a {
 		color: currentColor;
-		text-decoration: none;
+		text-decoration: underline transparent;
+		text-underline-offset: 0.3ex;
+
+		&:hover,
+		&:focus-visible {
+			text-decoration-color: currentColor;
+		}
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.navigation {
+		a {
+			transition: all 0.2s ease-in-out;
+			transition-property: background-color, text-decoration-color;
+		}
 	}
 }

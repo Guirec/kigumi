@@ -3,8 +3,21 @@ body {
 	font-size: var(--k-font-size);
 }
 
+a {
+	text-decoration: underline;
+	text-underline-offset: 0.2ex;
+}
+
+a:not(:is(:hover, :focus)) {
+	text-decoration-color: color-mix(in srgb, currentColor, transparent 75%);
+}
+
 @media (prefers-reduced-motion: no-preference) {
 	:root {
 		interpolate-size: allow-keywords;
+	}
+
+	html {
+		scroll-behavior: smooth;
 	}
 }

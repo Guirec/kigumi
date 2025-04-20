@@ -11,7 +11,8 @@
 .home__hero {
 	display: grid;
 	grid-template-columns: subgrid;
-	align-items: start;
+	grid-template-rows: 1fr auto;
+	border-block-end: var(--docs-layout-border-width) solid black;
 
 	> * {
 		grid-column: popout-start / content-end;
@@ -20,5 +21,58 @@
 
 	p {
 		grid-row: 1fr;
+	}
+}
+
+.home__intro {
+	--k-flow: var(--k-space-px-400);
+
+	grid-column: popout;
+	padding: var(--k-space-px-1000) 0;
+	text-shadow: 0.1ex 0.1ex 2px
+		color-mix(in oklch, var(--k-color-neutral-1000), transparent 90%);
+
+	h1 {
+		margin: 0;
+		font-size: clamp(1.5rem, 0.176rem + 3.529vw, 3rem);
+		max-width: 20ch;
+		text-wrap: balance;
+	}
+
+	p {
+		margin: 0;
+		font-size: clamp(1rem, 0.823rem + 0.47vw, 1.2rem);
+		max-width: 80ch;
+		text-wrap: pretty;
+	}
+}
+
+.home__start {
+	display: grid;
+	padding: var(--k-space-px-300);
+	color: black;
+	font-size: clamp(1rem, 0.559rem + 1.176vw, 1.5rem);
+	font-weight: 700;
+	text-decoration: underline transparent;
+	text-underline-offset: 0.2ex;
+	background: var(--k-color-neutral-0);
+	border: var(--docs-layout-border-width) solid black;
+	border-block-end: 0;
+
+	&:hover,
+	&:focus-visible {
+		background-color: color-mix(
+			in oklch,
+			var(--k-color-neutral-0),
+			transparent 10%
+		);
+		text-decoration-color: currentColor;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.home__start {
+		transition: all 0.2s ease-in-out;
+		transition-property: background-color, text-decoration-color;
 	}
 }

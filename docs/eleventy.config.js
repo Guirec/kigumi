@@ -1,26 +1,40 @@
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import { bundleAsync } from "lightningcss";
-import { resolve, dirname } from "node:path";
-import { deleteSync } from "del";
+import { resolve, dirname, join } from "node:path";
+import { readdirSync, statSync, rmSync } from "fs";
 
 export default function (eleventyConfig) {
-	eleventyConfig.addWatchTarget("assets/css/**/*.css");
-	// eleventyConfig.setWatchThrottleWaitTime(100);
+	// Clean CSS from public directory
+	function cleanCSSDirectory() {
+		const directory = "public/assets/css";
+		try {
+			const files = readdirSync(directory);
+			for (const file of files) {
+				const filePath = join(directory, file);
+				if (statSync(filePath).isFile()) {
+					console.log(`Deleting file: ${filePath}`);
+					rmSync(filePath); // Delete file
+				}
+			}
+		} catch (error) {
+			if (error.code !== "ENOENT") {
+				console.error(`Error cleaning CSS directory: ${error.message}`);
+			}
+		}
+	}
 
-	eleventyConfig.addFilter("cacheBust", () => {
-		return `?v=${Date.now()}`;
-	});
-
-	// Clean CSS output directory before bundling
-	eleventyConfig.on("beforeWatch", () => {
-		deleteSync(["public/assets/css/**/*"]);
+	// Clean CSS public directory before build (in production mode)
+	eleventyConfig.on("eleventy.before", () => {
+		if (process.env.NODE_ENV === "production") {
+			cleanCSSDirectory();
+		}
 	});
 
 	// Bundle CSS
 	eleventyConfig.addBundle("css", {
 		toFileDirectory: "assets/css",
 		transforms: [
-			async function (content) {
+			async (content) => {
 				try {
 					const { code } = await bundleAsync({
 						filename: resolve("assets/css/main.css"),
@@ -28,12 +42,16 @@ export default function (eleventyConfig) {
 						sourceMap: false,
 						resolver: {
 							resolve(specifier, from) {
-								if (specifier === "kigumi.css") {
-									return resolve("node_modules/@kigumi/styles/dist/kigumi.css");
+								if (specifier === "@kigumi/styles.css") {
+									return resolve("node_modules/@kigumi/styles/dist/styles.css");
+								}
+								if (specifier === "@kigumi/tokens.css") {
+									return resolve("node_modules/@kigumi/tokens/dist/tokens.css");
 								}
 								return resolve(dirname(from), specifier);
 							},
 						},
+						importResolver: true,
 						entries: [content],
 					});
 
@@ -51,19 +69,13 @@ export default function (eleventyConfig) {
 
 	return {
 		templateFormats: ["md", "liquid", "html", "11ty.js"],
-
-		// Pre-process *.md files with: (default: `liquid`)
 		markdownTemplateEngine: "liquid",
-
-		// Pre-process *.html files with: (default: `liquid`)
 		htmlTemplateEngine: "liquid",
-
-		// These are all optional:
 		dir: {
-			input: "content", // default: "."
-			includes: "../_includes", // default: "_includes" (`input` relative)
+			input: "content",
+			includes: "../_includes",
 			layouts: "../_includes/layouts",
-			data: "../_data", // default: "_data" (`input` relative)
+			data: "../_data",
 			output: "public",
 		},
 	};

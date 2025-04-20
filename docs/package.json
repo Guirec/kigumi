@@ -7,6 +7,7 @@
 		"dev": "eleventy --serve",
 		"dev:refresh": "pnpm --filter @kigumi/styles run dev & eleventy --serve",
 		"build": "eleventy",
+		"build:prod": "NODE_ENV=production eleventy",
 		"lint:fix": "biome check --write ."
 	},
 	"peerDependencies": {
@@ -16,7 +17,7 @@
 		"@11ty/eleventy": "^3.0.0",
 		"@11ty/eleventy-navigation": "^0.3.5",
 		"@kigumi/styles": "workspace:*",
-		"del": "^8.0.0",
+		"@kigumi/tokens": "workspace:*",
 		"lightningcss": "^1.29.1"
 	},
 	"license": "MIT",

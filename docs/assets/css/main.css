@@ -1,5 +1,6 @@
-/* Import Kigumi styles */
-@import "kigumi.css";
+/* Import Kigumi tokens and styles */
+@import "@kigumi/tokens.css";
+@import "@kigumi/styles.css";
 
 /* Compositions */
 

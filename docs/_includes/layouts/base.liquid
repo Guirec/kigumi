@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{ metadata.language }}">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{% if title %}{{ title }} - {% endif %}{{ metadata.title }}</title>
-		<meta
-			name="description"
-			content="{{ description | default: metadata.description }}"
-		/>
-		<link rel="stylesheet" href="{% getBundleFileUrl 'css' %}{{ '' | cacheBust }}">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+				{% if title %}
+						{{ title }} - {{ metadata.title }}
+				{% else %}
+						{{ metadata.title }} - {{ metadata.catchphrase }}
+				{% endif %}
+		</title>
+		<meta name="description" content="{{ description | default: metadata.description }}">
+		<link rel="stylesheet" href="{% getBundleFileUrl 'css' %}">
 		{% css %}
-			@import "kigumi.css";
 			@import "main.css";
 		{% endcss %}
 	</head>
 	<body class="layout"{% if layoutVariant %} data-variant="{{ layoutVariant }}"{% endif %}>
 		<header class="layout__header">
-			<a href="/" class="logo">{{ metadata.title }}</a>
+			<a href="/" class="logo" data-label="Home">{{ metadata.title }}</a>
 			<nav class="navigation" aria-label="primary">
 				{{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
 			</nav>

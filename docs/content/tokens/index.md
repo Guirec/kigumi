@@ -1,9 +1,9 @@
 ---
 layout: page.liquid
-title: Styles
+title: Tokens
 eleventyNavigation:
-  key: Styles
-  order: 1
+  key: Tokens
+  order: 0
 ---
 
-## Styles
+## Tokens

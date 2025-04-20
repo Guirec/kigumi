@@ -9,3 +9,6 @@ node_modules
 
 # Eleventy cache directory
 .eleventy
+
+# Temporary files created by the build process
+_tmp/

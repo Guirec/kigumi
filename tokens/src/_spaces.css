@@ -1,0 +1,31 @@
+:root {
+	--k-space-px-0: 0px;
+	--k-space-px-025: 2px;
+	--k-space-px-050: 4px;
+	--k-space-px-075: 6px;
+	--k-space-px-100: 8px;
+	--k-space-px-150: 12px;
+	--k-space-px-200: 16px;
+	--k-space-px-250: 20px;
+	--k-space-px-300: 24px;
+	--k-space-px-400: 32px;
+	--k-space-px-500: 40px;
+	--k-space-px-600: 48px;
+	--k-space-px-800: 64px;
+	--k-space-px-1000: 80px;
+
+	--k-space-rem-0: 0rem; /* 0px */
+	--k-space-rem-025: 0.125rem; /* 2px */
+	--k-space-rem-050: 0.25rem; /* 4px */
+	--k-space-rem-075: 0.375rem; /* 6px */
+	--k-space-rem-100: 0.5rem; /* 8px */
+	--k-space-rem-150: 0.75rem; /* 12px */
+	--k-space-rem-200: 1rem; /* 16px */
+	--k-space-rem-250: 1.25rem; /* 20px */
+	--k-space-rem-300: 1.5rem; /* 24px */
+	--k-space-rem-400: 2rem; /* 32px */
+	--k-space-rem-500: 2.5rem; /* 40px */
+	--k-space-rem-600: 3rem; /* 48px */
+	--k-space-rem-800: 4rem; /* 64px */
+	--k-space-rem-1000: 5rem; /* 80px */
+}

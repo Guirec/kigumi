@@ -13,5 +13,9 @@ tab_width = 2
 [*.{js,jsx,ts,tsx,json}]
 quote_type = double
 
+[*.{yaml,yml}]
+indent_style = space
+indent_size = 2
+
 [*.md]
 trim_trailing_whitespace = false

@@ -21,7 +21,7 @@
 	display: flex;
 	align-items: stretch;
 	height: var(--docs-page-header-height);
-	padding: var(--docs-spacing-3) var(--docs-spacing-6);
+	padding: var(--k-space-px-100) var(--k-space-px-300);
 	background-color: var(--docs-color-neutral-0);
 	border-block-end: var(--docs-page-border-width) solid black;
 }
