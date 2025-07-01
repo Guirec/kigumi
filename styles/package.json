@@ -1,0 +1,13 @@
+{
+	"name": "@kigumi/styles",
+	"version": "0.0.1",
+	"description": "Kigumi styles",
+	"author": "Guirec Lefort <bonjour@guirec.dev>",
+	"license": "MIT",
+	"type": "module",
+	"keywords": [
+		"css",
+		"design-system",
+		"styles"
+	]
+}

@@ -1,0 +1,9 @@
+{
+	"name": "kigumi",
+	"private": true,
+	"version": "0.0.1",
+	"description": "A design system for your everyday projects",
+	"author": "Guirec Lefort <bonjour@guirec.dev>",
+	"license": "MIT",
+	"type": "module"
+}

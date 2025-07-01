@@ -1,0 +1,13 @@
+{
+	"name": "@kigumi/tokens",
+	"version": "0.0.1",
+	"description": "Kigumi tokens",
+	"author": "Guirec Lefort <bonjour@guirec.dev>",
+	"license": "MIT",
+	"type": "module",
+	"keywords": [
+		"css",
+		"design-system",
+		"tokens"
+	]
+}

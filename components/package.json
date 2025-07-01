@@ -1,0 +1,15 @@
+{
+	"name": "@kigumi/components",
+	"version": "0.0.1",
+	"description": "Kigumi components",
+	"author": "Guirec Lefort <bonjour@guirec.dev>",
+	"license": "MIT",
+	"type": "module",
+	"keywords": [
+		"components",
+		"design-system",
+		"frontend",
+		"ui",
+		"web-components"
+	]
+}
