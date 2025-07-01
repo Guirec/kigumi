@@ -1,0 +1,13 @@
+{
+	"name": "@kigumi/docs",
+	"version": "0.0.1",
+	"description": "Kigumi documentation",
+	"author": "Guirec Lefort <bonjour@guirec.dev>",
+	"license": "MIT",
+	"type": "module",
+	"keywords": [
+		"documentation",
+		"docs",
+		"design-system"
+	]
+}
