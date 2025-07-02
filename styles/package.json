@@ -5,6 +5,28 @@
 	"author": "Guirec Lefort <bonjour@guirec.dev>",
 	"license": "MIT",
 	"type": "module",
+	"files": [
+		"dist",
+		"src"
+	],
+	"exports": {
+		".": {
+			"import": "./dist/styles.css",
+			"default": "./dist/styles.css"
+		},
+		"./elements/*": {
+			"import": "./src/elements/*.css"
+		},
+		"./utilities/*": {
+			"import": "./src/utilities/*.css"
+		}
+	},
+	"scripts": {
+		"build": "lightningcss --minify --bundle src/styles.css --output-file dist/styles.css"
+	},
+	"devDependencies": {
+		"lightningcss-cli": "^1.30.1"
+	},
 	"keywords": [
 		"css",
 		"design-system",

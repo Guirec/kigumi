@@ -1,0 +1,3 @@
+.flow > * + * {
+	margin-block-start: var(--k-flow, 1em);
+}

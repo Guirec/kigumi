@@ -1,0 +1,19 @@
+/* Hide Web Components until they are defined */
+:not(:defined) {
+	visibility: hidden;
+}
+
+body {
+	font-family: var(--k-font-family);
+}
+
+/* Only apply the following styles if the user has not set a preference for reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+	:root {
+		interpolate-size: allow-keywords;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+}
