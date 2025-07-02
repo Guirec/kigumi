@@ -5,6 +5,23 @@
 	"author": "Guirec Lefort <bonjour@guirec.dev>",
 	"license": "MIT",
 	"type": "module",
+	"scripts": {
+		"build": "vite build"
+	},
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": "./dist/kigumi.js",
+		"./icon": "./dist/components/icon/icon.js",
+		"./disclosure": "./dist/components/disclosure/disclosure.js"
+	},
+	"peerDependencies": {
+		"lucide": "^0.523.0"
+	},
+	"devDependencies": {
+		"vite": "^7.0.0"
+	},
 	"keywords": [
 		"components",
 		"design-system",

@@ -1,0 +1,43 @@
+.logo {
+	grid-column: full-start / content-start;
+	display: flex;
+	align-items: center;
+	padding: var(--docs-layout-header-padding-block)
+		var(--docs-layout-header-padding-inline);
+	font-size: 1.25rem;
+	font-weight: 700;
+	text-decoration: none;
+	color: currentColor;
+	border-inline-end: var(--docs-layout-border-width) solid black;
+
+	&::after {
+		content: "- " attr(data-label);
+		display: block;
+		margin-block-start: 0.1lh;
+		margin-inline-start: 0.5ch;
+		font-size: 0.7em;
+		text-transform: lowercase;
+		opacity: 0;
+	}
+
+	&:hover,
+	&:focus-visible {
+		color: var(--k-color-neutral-0);
+		background-color: var(--k-color-neutral-1000);
+
+		&::after {
+			opacity: 1;
+		}
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.logo {
+		transition: all 0.2s ease-in-out;
+		transition-property: color, background-color;
+
+		&::after {
+			transition: opacity 0.2s ease-in-out;
+		}
+	}
+}

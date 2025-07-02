@@ -1,0 +1,55 @@
+:host {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--k-icon-width);
+	height: var(--k-icon-height);
+	padding: var(--k-icon-padding);
+	background: var(--k-icon-background);
+	border-width: var(--k-icon-border-width);
+	border-style: var(--k-icon-border-style);
+	border-color: var(--k-icon-border-color);
+	border-radius: var(--k-icon-border-radius);
+}
+
+svg {
+	width: var(--k-icon-svg-width);
+	height: var(--k-icon-svg-height);
+	fill: var(--k-icon-svg-fill);
+	stroke: var(--k-icon-svg-stroke);
+	stroke-width: var(--k-icon-svg-stroke-width);
+	stroke-linecap: var(--k-icon-svg-stroke-linecap);
+	stroke-linejoin: var(--k-icon-svg-stroke-linejoin);
+
+	& path {
+		transition-property: transform;
+
+		&:nth-child(1) {
+			transform-origin: var(--k-icon-svg-path-1-transform-origin);
+			transform: var(--k-icon-svg-path-1-transform);
+		}
+
+		&:nth-child(2) {
+			transform-origin: var(--k-icon-svg-path-2-transform-origin);
+			transform: var(--k-icon-svg-path-2-transform);
+		}
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	svg {
+		& path {
+			&:nth-child(1) {
+				transition-duration: var(--k-icon-svg-path-1-transition-duration);
+				transition-timing-function: var(--k-icon-svg-path-1-transition-timing-function);
+				transition-delay: var(--k-icon-svg-path-1-transition-delay);
+			}
+
+			&:nth-child(2) {
+				transition-duration: var(--k-icon-svg-path-2-transition-duration);
+				transition-timing-function: var(--k-icon-svg-path-2-transition-timing-function);
+				transition-delay: var(--k-icon-svg-path-2-transition-delay);
+			}
+		}
+	}
+}
