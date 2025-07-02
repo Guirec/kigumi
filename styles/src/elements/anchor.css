@@ -1,0 +1,8 @@
+a {
+	text-decoration: underline;
+	text-underline-offset: 0.2ex;
+}
+
+a:not(:is(:hover, :focus)) {
+	text-decoration-color: color-mix(in srgb, currentColor, transparent 75%);
+}

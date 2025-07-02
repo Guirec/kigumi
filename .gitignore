@@ -1,2 +1,5 @@
 # Dependencies directory - contains all installed npm packages
 node_modules
+
+# Build output directories
+dist

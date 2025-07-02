@@ -1,0 +1,11 @@
+/* Layers */
+@layer kigumi;
+@layer kigumi.theme, kigumi.elements, kigumi.components, kigumi.utilities;
+
+/* Elements */
+@import "elements/reset.css" layer(kigumi.elements);
+@import "elements/document.css" layer(kigumi.elements);
+@import "elements/anchor.css" layer(kigumi.elements);
+
+/* Utilities */
+@import "utilities/flow.css" layer(kigumi.utilities);
