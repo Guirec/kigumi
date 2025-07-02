@@ -5,6 +5,18 @@
 	"author": "Guirec Lefort <bonjour@guirec.dev>",
 	"license": "MIT",
 	"type": "module",
+	"files": [
+		"tokens.json",
+		"tokens.css",
+		"tokens-json-to-css.js"
+	],
+	"main": "./tokens.json",
+	"bin": {
+		"kigumi-json-to-css": "./tokens-json-to-css.js"
+	},
+	"scripts": {
+		"generate:css": "node tokens-json-to-css.js"
+	},
 	"keywords": [
 		"css",
 		"design-system",
