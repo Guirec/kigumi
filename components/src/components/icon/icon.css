@@ -1,0 +1,52 @@
+:host {
+	block-size: var(--k-icon-size);
+	inline-size: var(--k-icon-size);
+}
+
+svg {
+	display: block;
+	block-size: 100%;
+	inline-size: 100%;
+	fill: var(--k-icon-svg-fill);
+	stroke: var(--k-icon-svg-stroke);
+	stroke-width: var(--k-icon-svg-stroke-width);
+	stroke-linecap: var(--k-icon-svg-stroke-linecap);
+	stroke-linejoin: var(--k-icon-svg-stroke-linejoin);
+	filter: var(--k-icon-svg-filter);
+	transform: var(--k-icon-svg-transform);
+	transform-origin: var(--k-icon-svg-transform-origin);
+
+	& path {
+		&:nth-child(1) {
+			transform: var(--k-icon-svg-path-1-transform);
+			transform-origin: var(--k-icon-svg-path-1-transform-origin);
+		}
+
+		&:nth-child(2) {
+			transform: var(--k-icon-svg-path-2-transform);
+			transform-origin: var(--k-icon-svg-path-2-transform-origin);
+		}
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	svg {
+		transition: var(--k-icon-svg-transition);
+
+		& path {
+			transition-property: var(--k-icon-svg-path-transition-property);
+
+			&:nth-child(1) {
+				transition-duration: var(--k-icon-svg-path-1-transition-duration);
+				transition-timing-function: var(--k-icon-svg-path-1-transition-timing-function);
+				transition-delay: var(--k-icon-svg-path-1-transition-delay);
+			}
+
+			&:nth-child(2) {
+				transition-duration: var(--k-icon-svg-path-2-transition-duration);
+				transition-timing-function: var(--k-icon-svg-path-2-transition-timing-function);
+				transition-delay: var(--k-icon-svg-path-2-transition-delay);
+			}
+		}
+	}
+}
