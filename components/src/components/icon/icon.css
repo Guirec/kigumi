@@ -1,0 +1,36 @@
+:host {
+	block-size: var(--k-icon-size);
+	inline-size: var(--k-icon-size);
+	padding: var(--k-icon-padding);
+	background: var(--k-icon-background);
+	border: var(--k-icon-border);
+	border-radius: var(--k-icon-border-radius);
+}
+
+/*
+ * SVG
+ */
+
+svg {
+	display: block;
+	block-size: 100%;
+	inline-size: 100%;
+	fill: var(--k-icon-svg-fill);
+	stroke: var(--k-icon-svg-stroke);
+	stroke-width: var(--k-icon-svg-stroke-width);
+	stroke-linecap: var(--k-icon-svg-stroke-linecap);
+	stroke-linejoin: var(--k-icon-svg-stroke-linejoin);
+	filter: var(--k-icon-svg-filter);
+	transform: var(--k-icon-svg-transform);
+	transform-origin: var(--k-icon-svg-transform-origin);
+}
+
+/*
+ * Animation
+ */
+
+@media (prefers-reduced-motion: no-preference) {
+	svg {
+		transition: var(--k-icon-svg-transition);
+	}
+}

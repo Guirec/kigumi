@@ -1,5 +1,8 @@
 # Dependencies directory - contains all installed npm packages
 node_modules
 
+# Vite cache directory
+.vite
+
 # Build output directories
 dist

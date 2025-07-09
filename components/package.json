@@ -5,6 +5,18 @@
 	"author": "Guirec Lefort <bonjour@guirec.dev>",
 	"license": "MIT",
 	"type": "module",
+	"scripts": {
+		"build": "vite build"
+	},
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": "./dist/index.js"
+	},
+	"devDependencies": {
+		"vite": "^7.0.0"
+	},
 	"keywords": [
 		"components",
 		"design-system",
