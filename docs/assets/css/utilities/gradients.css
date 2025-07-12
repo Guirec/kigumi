@@ -1,0 +1,124 @@
+.gradients {
+	--docs-gradients-text-color: white;
+	--docs-gradients-background-color: oklch(59.2% 0.0935 251.98);
+	--docs-gradients-background-image:
+		radial-gradient(
+			30% 20% at 96% 2%,
+			oklch(72.49% 0.075 121.93 / 85%) 0%,
+			oklch(72.49% 0.075 121.93 / 0%) 100%
+		),
+		radial-gradient(
+			40% 20% at 58% -5%,
+			oklch(76.02% 0.0311 178.04 / 73%) 5%,
+			oklch(76.02% 0.0311 178.04 / 0%) 100%
+		),
+		radial-gradient(
+			25% 25% at 3% 89%,
+			oklch(78.5% 0.0276 257.04 / 89%) 5%,
+			oklch(78.5% 0.0276 257.04 / 0%) 100%
+		),
+		radial-gradient(
+			10% 35% at 37% 44%,
+			oklch(74.04% 0.0585 232.41 / 65%) 30%,
+			oklch(74.04% 0.0585 232.41 / 0%) 100%
+		),
+		radial-gradient(
+			30% 60% at 68% 39%,
+			oklch(69.84% 0.1194 136.77) 30%,
+			oklch(69.84% 0.1194 136.77 / 0%) 100%
+		),
+		radial-gradient(
+			30% 15% at 45% 80%,
+			oklch(69.84% 0.1194 136.77 / 32%) 30%,
+			oklch(69.84% 0.1194 136.77 / 0%) 100%
+		),
+		radial-gradient(
+			10% 15% at 20% 69%,
+			oklch(78.5% 0.0276 257.04 / 42%) 0%,
+			oklch(78.5% 0.0276 257.04 / 0%) 100%
+		),
+		radial-gradient(
+			35% 31% at 110% 75%,
+			oklch(35.52% 0.1787 275.33 / 85%) 15%,
+			oklch(35.52% 0.1787 275.33 / 0%) 100%
+		),
+		radial-gradient(
+			35% 20% at 60% 110%,
+			oklch(35.56% 0.1683 275.25 / 34%) 45%,
+			oklch(35.56% 0.1683 275.25 / 0%) 100%
+		),
+		radial-gradient(
+			60% 40% at 84% 11%,
+			oklch(69.84% 0.1194 136.77) 35%,
+			oklch(69.84% 0.1194 136.77 / 0%) 100%
+		),
+		linear-gradient(
+			120deg,
+			oklch(59.65% 0.0936 250.11) 0%,
+			oklch(72.48% 0.0639 235.54) 45%,
+			oklch(35.45% 0.179 274.89) 100%
+		);
+	--docs-gradients-background-noise-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="n"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="5" numOctaves="5" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23n)"/%3E%3C/svg%3E');
+	--docs-gradients-background-noise-opacity: 0.3;
+	--docs-gradients-background-image-mix-blend-mode: overlay;
+
+	position: relative;
+	z-index: 1;
+	color: var(--docs-gradients-text-color);
+	background-color: var(--docs-gradients-background-color);
+	background-image: var(--docs-gradients-background-image);
+	background-size: cover;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background-image: var(--docs-gradients-background-noise-image);
+		background-repeat: repeat;
+		opacity: var(--docs-gradients-background-noise-opacity);
+		mix-blend-mode: var(--docs-gradients-background-image-mix-blend-mode);
+		pointer-events: none;
+	}
+}
+
+/* .glass {
+	position: relative;
+	z-index: 1;
+	background-color: transparent;
+	border: 0;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		height: 200%;
+		background: hsl(0deg 0% 100% / 0.1);
+		backdrop-filter: blur(16px);
+		mask-image: linear-gradient(
+			to bottom,
+			black 0% 50%,
+			transparent 50% 100%
+		);
+		pointer-events: none;
+	}
+
+	&::after {
+		content: "";
+		--thickness: 2px;
+		position: absolute;
+		inset: 0;
+		height: 100%;
+		transform: translateY(100%);
+		background: hsl(0deg 0% 100% / 0.15);
+		backdrop-filter: blur(8px) brightness(120%);
+		pointer-events: none;
+		mask-image: linear-gradient(
+			to bottom,
+			black 0,
+			black var(--thickness),
+			transparent var(--thickness)
+		);
+	}
+} */
