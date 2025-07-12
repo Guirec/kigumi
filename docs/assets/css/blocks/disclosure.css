@@ -1,0 +1,49 @@
+k-disclosure {
+	--k-disclosure-display: flex;
+	--k-disclosure-flex-direction: column;
+	--k-disclosure-gap: 0;
+
+	--k-disclosure-background-color: transparent;
+	--k-disclosure-border-color: black;
+	--k-disclosure-border-width: 2px;
+	--k-disclosure-border-style: solid;
+
+	/* Summary */
+	--k-disclosure-summary-padding: 0.5rem;
+	--k-disclosure-summary-gap: 1rem;
+	--k-disclosure-summary-font-weight: 700;
+	--k-disclosure-summary-background-color: var(--k-disclosure-background-color);
+	--k-disclosure-summary-border-width: var(--k-disclosure-border-width);
+	--k-disclosure-summary-border-style: var(--k-disclosure-border-style);
+	--k-disclosure-summary-border-color: var(--k-disclosure-border-color);
+	--k-disclosure-summary-border-radius: 0;
+	--k-disclosure-summary-background-color-hover: #eeeeee;
+	--k-disclosure-summary-cursor: pointer;
+
+	/* Summary icon */
+	--k-disclosure-icon-svg-width: 1.5rem;
+	--k-disclosure-icon-svg-height: 1.5rem;
+	--k-disclosure-icon-svg-fill: none;
+	--k-disclosure-icon-svg-stroke: currentColor;
+	--k-disclosure-icon-svg-stroke-width: 2;
+	--k-disclosure-icon-svg-stroke-linecap: round;
+	--k-disclosure-icon-svg-stroke-linejoin: round;
+
+	--k-disclosure-icon-svg-transform-origin: center;
+	--k-disclosure-icon-svg-transform-open: rotate(90deg);
+	--k-disclosure-icon-transition: transform 0.3s ease;
+
+	/* Content */
+	--k-disclosure-content-padding: 1rem;
+	--k-disclosure-content-background-color: var(--k-disclosure-background-color);
+	--k-disclosure-content-border-width: 0 var(--k-disclosure-border-width) var(--k-disclosure-border-width);
+	--k-disclosure-content-border-style: var(--k-disclosure-border-style);
+	--k-disclosure-content-border-color: var(--k-disclosure-border-color);
+	--k-disclosure-content-border-radius: 0;
+
+	/* Transition */
+	--k-disclosure-transition-duration: 0.2s;
+
+	/* Details */
+	--k-disclosure-not-first-child-margin: calc(-1 * var(--k-disclosure-border-width)) 0 0;
+}

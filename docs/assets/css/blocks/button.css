@@ -1,0 +1,11 @@
+k-button {
+	&:where(:hover, :focus) {
+		--state-background-color: color-mix(
+			in srgb,
+			var(--button-background-color),
+			white 10%
+		);
+
+		background-color: var(--state-background-color);
+	}
+}

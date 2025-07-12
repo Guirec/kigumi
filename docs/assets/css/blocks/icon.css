@@ -1,0 +1,18 @@
+k-icon {
+	--k-icon-size: 1em;
+	--k-icon-svg-fill: none;
+	--k-icon-svg-stroke: currentColor;
+	--k-icon-svg-stroke-width: 2;
+	--k-icon-svg-stroke-linecap: round;
+	--k-icon-svg-stroke-linejoin: round;
+}
+
+/* Icon component styles for documentation */
+
+.demo {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin: 1rem 0;
+	padding: 1rem;
+}
