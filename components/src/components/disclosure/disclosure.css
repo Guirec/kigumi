@@ -1,0 +1,128 @@
+:host {
+	display: var(--k-disclosure-display);
+	flex-direction: var(--k-disclosure-flex-direction);
+	gap: var(--k-disclosure-gap);
+}
+
+/*
+ * Details
+ */
+
+details {
+	display: var(--k-disclosure-details-display);
+	flex-direction: var(--k-disclosure-details-flex-direction);
+	gap: var(--k-disclosure-details-gap);
+
+	& + details {
+		margin: var(--k-disclosure-details-next-sibling-margin);
+	}
+}
+
+/*
+ * Summary
+ */
+
+summary {
+	position: relative;
+	display: var(--k-disclosure-summary-display);
+	align-items: var(--k-disclosure-summary-align-items);
+	justify-content: var(--k-disclosure-summary-justify-content);
+	gap: var(--k-disclosure-summary-gap);
+	padding: var(--k-disclosure-summary-padding);
+	color: var(--k-disclosure-summary-color);
+	font-family: var(--k-disclosure-summary-font-family);
+	font-size: var(--k-disclosure-summary-font-size);
+	font-style: var(--k-disclosure-summary-font-style);
+	font-weight: var(--k-disclosure-summary-font-weight);
+	letter-spacing: var(--k-disclosure-summary-letter-spacing);
+	line-height: var(--k-disclosure-summary-line-height);
+	background: var(--k-disclosure-summary-background);
+	border-width: var(--k-disclosure-summary-border-width);
+	border-style: var(--k-disclosure-summary-border-style);
+	border-color: var(--k-disclosure-summary-border-color);
+	border-radius: var(--k-disclosure-summary-border-radius);
+	cursor: var(--k-disclosure-summary-cursor);
+
+	&:hover,
+	&:focus-visible {
+		z-index: 1;
+		background: var(--k-disclosure-summary-background-interactive);
+	}
+
+	&::-webkit-details-marker,
+	&::marker {
+		content: none;
+		display: none;
+	}
+
+	& > k-icon {
+		--k-icon-size: var(--k-disclosure-icon-size);
+		--k-icon-padding: var(--k-disclosure-icon-padding);
+		--k-icon-background: var(--k-disclosure-icon-background);
+		--k-icon-border: var(--k-disclosure-icon-border);
+		--k-icon-border-radius: var(--k-disclosure-icon-border-radius);
+
+		--k-icon-svg-fill: var(--k-disclosure-icon-svg-fill);
+		--k-icon-svg-stroke: var(--k-disclosure-icon-svg-stroke);
+		--k-icon-svg-stroke-width: var(--k-disclosure-icon-svg-stroke-width);
+		--k-icon-svg-stroke-linecap: var(--k-disclosure-icon-svg-stroke-linecap);
+		--k-icon-svg-stroke-linejoin: var(--k-disclosure-icon-svg-stroke-linejoin);
+		--k-icon-svg-transform: var(--k-disclosure-icon-svg-transform);
+		--k-icon-svg-transform-origin: var(--k-disclosure-icon-svg-transform-origin);
+
+		flex: 0 0 auto;
+		order: 1;
+
+		[open] & {
+			--k-icon-svg-transform: var(--k-disclosure-icon-svg-transform-open);
+		}
+
+		:host([icon-position="start"]) & {
+			order: -1;
+		}
+	}
+
+	& > :is(div, span, p, h1, h2, h3, h4, h5, h6) {
+		all: unset;
+	}
+}
+
+/*
+ * Content
+ */
+
+summary + * {
+	padding: var(--k-disclosure-content-padding);
+	background: var(--k-disclosure-content-background);
+	border-width: var(--k-disclosure-content-border-width);
+	border-style: var(--k-disclosure-content-border-style);
+	border-color: var(--k-disclosure-content-border-color);
+	border-radius: var(--k-disclosure-content-border-radius);
+}
+
+/*
+ * Animation
+ */
+
+@media (prefers-reduced-motion: no-preference) {
+	details {
+		&::details-content {
+			opacity: 0;
+			block-size: 0;
+			overflow-y: clip;
+			transition:
+				content-visibility var(--k-disclosure-transition-duration) allow-discrete,
+				opacity var(--k-disclosure-transition-duration),
+				block-size var(--k-disclosure-transition-duration);
+		}
+
+		&[open]::details-content {
+			opacity: 1;
+			block-size: auto;
+		}
+	}
+
+	summary > k-icon {
+		--k-icon-svg-transition: var(--k-disclosure-icon-svg-transition);
+	}
+}

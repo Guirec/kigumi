@@ -1,0 +1,21 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<main class="layout__main">
+	<article class="content">
+		<header class="content__header">
+			<h1>{{ title }}</h1>
+		</header>
+		{{ content | safe }}
+	</article>
+</main>
+<nav class="layout__sidebar" aria-label="secondary">
+	<ul>
+		{%- for component in collections.components -%}
+		<li>
+			<a href="{{ component.url }}">{{ component.data.title }}</a>
+		</li>
+		{%- endfor -%}
+	</ul>
+</nav>
+{% endblock %}

@@ -82,6 +82,7 @@ class Icon extends HTMLElement {
 	 */
 	static #updateAllInstances() {
 		const instances = new Set();
+
 		document.querySelectorAll("k-icon").forEach((icon) => {
 			if (!Icon.#iconInstances.has(icon)) {
 				instances.add(icon);

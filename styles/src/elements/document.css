@@ -3,6 +3,11 @@
 	visibility: hidden;
 }
 
+/* Add a scroll margin to the targeted element (e.g. anchor links) */
+:target {
+	scroll-margin-block-start: 2em;
+}
+
 body {
 	font-family: var(--k-font-family);
 }

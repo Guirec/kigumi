@@ -1,0 +1,51 @@
+k-disclosure {
+	--k-disclosure-display: flex;
+	--k-disclosure-flex-direction: column;
+	--k-disclosure-gap: 0;
+
+	--k-disclosure-background: transparent;
+	--k-disclosure-border-width: 2px;
+	--k-disclosure-border-style: solid;
+	--k-disclosure-border-color: black;
+
+	/* Details */
+	--k-disclosure-details-next-sibling-margin: calc(-1 * var(--k-disclosure-border-width)) 0 0;
+
+	/* Summary */
+	--k-disclosure-summary-display: flex;
+	--k-disclosure-summary-align-items: center;
+	--k-disclosure-summary-justify-content: space-between;
+	--k-disclosure-summary-padding: 0.5rem;
+	--k-disclosure-summary-gap: 1rem;
+	--k-disclosure-summary-font-size: 1em;
+	--k-disclosure-summary-font-weight: 700;
+	--k-disclosure-summary-background: var(--k-disclosure-background);
+	--k-disclosure-summary-border-width: var(--k-disclosure-border-width);
+	--k-disclosure-summary-border-style: var(--k-disclosure-border-style);
+	--k-disclosure-summary-border-color: var(--k-disclosure-border-color);
+	--k-disclosure-summary-border-radius: 0;
+	--k-disclosure-summary-background-interactive: #eeeeee;
+	--k-disclosure-summary-cursor: pointer;
+
+	/* Summary icon */
+	--k-disclosure-icon-size: 1.25em;
+	--k-disclosure-icon-svg-fill: none;
+	--k-disclosure-icon-svg-stroke: currentColor;
+	--k-disclosure-icon-svg-stroke-width: 2;
+	--k-disclosure-icon-svg-stroke-linecap: round;
+	--k-disclosure-icon-svg-stroke-linejoin: round;
+
+	--k-disclosure-icon-svg-transform-origin: center;
+	--k-disclosure-icon-svg-transform-open: rotate(90deg);
+	--k-disclosure-icon-svg-transition: transform 0.3s ease;
+
+	/* Content */
+	--k-disclosure-content-padding: 1rem;
+	--k-disclosure-content-background: var(--k-disclosure-background);
+	--k-disclosure-content-border-width: 0 var(--k-disclosure-border-width) var(--k-disclosure-border-width);
+	--k-disclosure-content-border-style: var(--k-disclosure-border-style);
+	--k-disclosure-content-border-color: var(--k-disclosure-border-color);
+
+	/* Transition */
+	--k-disclosure-transition-duration: 0.2s;
+}

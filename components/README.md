@@ -25,6 +25,7 @@ import '@kigumi/components';
 
 // Or individual import for tree-shaking
 import { Icon } from '@kigumi/components';
+import { Disclosure } from '@kigumi/components';
 ```
 
 ### HTML usage (without bundler)

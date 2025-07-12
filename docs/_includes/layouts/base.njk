@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ metadata.language }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		{% if title %}
+			{{ title }} - {{ metadata.title }}
+		{% else %}
+			{{ metadata.title }} - {{ metadata.catchphrase }}
+		{% endif %}
+	</title>
+	<meta name="description" content="{{ description or metadata.description }}">
+	<link rel="stylesheet" href="{% getBundleFileUrl 'css' %}">
+	{% css %}@import "main.css";{% endcss %}
+
+	<script type="importmap">
+	{
+		"imports": {
+			"lucide": "https://esm.sh/lucide"
+		}
+	}
+	</script>
+	{% if components %}
+	<script type="module">
+		{%- for component in components -%}
+		import { {{ component | capitalize }} } from '/assets/js/kigumi/index.js';
+		{%- if component == 'icon' -%}
+		import { iconConfig } from '/assets/js/icon-config.js';
+
+		{{ component | capitalize }}.addIconConfig(iconConfig);
+		{%- endif -%}
+		{%- endfor -%}
+	</script>
+	{% endif %}
+</head>
+<body class="layout"{% if layoutVariant %} data-variant="{{ layoutVariant }}"{% endif %}>
+	<header class="layout__header">
+		<a href="/" class="logo" data-label="Home">{{ metadata.title }}</a>
+		<nav class="navigation" aria-label="primary">
+			{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+		</nav>
+	</header>
+	{% block content %}{% endblock %}
+</body>
+</html>

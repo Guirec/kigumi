@@ -12,6 +12,7 @@
 		"lint:fix": "biome check --write"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.0.6"
+		"@biomejs/biome": "^2.0.6",
+		"stylelint": "^16.21.0"
 	}
 }

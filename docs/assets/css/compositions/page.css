@@ -1,0 +1,41 @@
+.page {
+	--docs-page-header-height: 3.5rem;
+	--docs-page-sidebar-width: 240px;
+	--docs-page-border-width: 2px;
+
+	position: relative;
+	display: grid;
+	grid:
+		"header header" var(--docs-page-header-height)
+		"sidebar main" 1fr
+		/ var(--docs-page-sidebar-width) 1fr;
+	width: 100%;
+	height: 100dvh;
+}
+
+.page__header {
+	grid-area: header;
+	position: fixed;
+	inset: 0 0 auto;
+	z-index: 10;
+	display: flex;
+	align-items: stretch;
+	height: var(--docs-page-header-height);
+	padding: var(--k-space-px-100) var(--k-space-px-300);
+	background-color: var(--docs-color-neutral-0);
+	border-block-end: var(--docs-page-border-width) solid black;
+}
+
+.page__sidebar {
+	grid-area: sidebar;
+	position: fixed;
+	inset: var(--docs-page-header-height) auto 0;
+	z-index: 10;
+	width: var(--docs-page-sidebar-width);
+	border-inline-end: var(--docs-page-border-width) solid black;
+}
+
+.page__main {
+	position: relative;
+	grid-area: main;
+}
